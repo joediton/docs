@@ -59,7 +59,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('fonts', function () {
     gulp.src([
-        'node_modules/font-awesome/fonts/**/*',
+        // 'node_modules/font-awesome/fonts/**/*',
         'assets/fonts/**/*'
     ])
         .pipe(gulp.dest(path_to_dist + 'fonts/'))
@@ -84,7 +84,7 @@ gulp.task('images', function () {
 gulp.task('js', function () {
     gulp.src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/bootstrap/dist/js/bootstrap.js',
+        // 'node_modules/bootstrap/dist/js/bootstrap.js',
         'assets/js/**/*.js'
     ])
         .pipe(sourcemaps.init())
