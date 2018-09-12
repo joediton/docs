@@ -23,7 +23,7 @@ const watch = require('gulp-watch');
 
 // PATHS
 
-const path_to_dist = 'dist/';
+const path_to_dist = 'docs/assets/';
 
 
 // ERROR HANDLING
@@ -49,7 +49,7 @@ gulp.task('browser-sync', function () {
         reloadDelay: 1000,
         // proxy: 'localhost:8000'
         server: {
-            baseDir: "./"
+            baseDir: "./docs/"
         }
     });
 });
@@ -59,7 +59,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('fonts', function () {
     gulp.src([
-        // 'node_modules/font-awesome/fonts/**/*',
+        'node_modules/font-awesome/fonts/**/*',
         'assets/fonts/**/*'
     ])
         .pipe(gulp.dest(path_to_dist + 'fonts/'))
