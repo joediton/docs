@@ -1,69 +1,69 @@
 doctype html
 html(lang="en")
-head
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  head
+      meta(charset="utf-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
-    // Search Engine Metadata
-    title Docs
-    meta(name="description", content="")
+      // Search Engine Metadata
+      title Docs
+      meta(name="description", content="")
 
-    // Stylesheets
-    link(rel="stylesheet", type="text/css", href="./assets/css/home_template.css")
+      // Stylesheets
+      link(rel="stylesheet", type="text/css", href="./assets/css/home_template.css")
 
-body
-  header
-    .jumbotron
-      .container-fluid.text-center
-        h1.display-3 Docs
-  
-  main
-    .container-fluid
-      .row
-        .col-md-3
-          .accordion#accordionExample
-            .card
-              .card-header
-                h5.mb-0
-                  button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne") Git
+  body
+    header
+      .jumbotron
+        .container-fluid.text-center
+          h1.display-3 Docs
+    
+    main
+      .container-fluid
+        .row
+          .col-md-3
+            .accordion#accordionExample
+              .card
+                .card-header
+                  h5.mb-0
+                    button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne") Git
 
-              #collapseOne.collapse.show(data-parent="#accordionExample")
-                .card-body
-                  ul.nav.flex-column
-                    li.nav-item
-                      a.nav-link(href="/") Remotes
-                    li.nav-item
-                      a.nav-link(href="#") Removing Files
-            .card
-              .card-header
-                h5.mb-0
-                  button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTwo") Python
+                #collapseOne.collapse.show(data-parent="#accordionExample")
+                  .card-body
+                    ul.nav.flex-column
+                      li.nav-item
+                        a.nav-link(href="/") Remotes
+                      li.nav-item
+                        a.nav-link(href="#") Removing Files
+              .card
+                .card-header
+                  h5.mb-0
+                    button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTwo") Python
 
-              #collapseTwo.collapse(data-parent="#accordionExample")
-                .card-body
-                  ul.nav.flex-column
-                    li.nav-item
-                      a.nav-link(href="#") PIP
-                    li.nav-item
-                      a.nav-link(href="#") Django
-                    li.nav-item
-                      a.nav-link(href="#") virtualenv
-            .card
-              .card-header
-                h5.mb-0
-                  button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseThree") Mac
+                #collapseTwo.collapse(data-parent="#accordionExample")
+                  .card-body
+                    ul.nav.flex-column
+                      li.nav-item
+                        a.nav-link(href="#") PIP
+                      li.nav-item
+                        a.nav-link(href="#") Django
+                      li.nav-item
+                        a.nav-link(href="#") virtualenv
+              .card
+                .card-header
+                  h5.mb-0
+                    button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseThree") Mac
 
-              #collapseThree.collapse(data-parent="#accordionExample")
-                .card-body
-                  ul.nav.flex-column
-                    li.nav-item
-                      a.nav-link(href="#") Hidden Files
-                    li.nav-item
-                      a.nav-link(href="#") SSH Keys
-          
-        .col-md-9
-          block content
+                #collapseThree.collapse(data-parent="#accordionExample")
+                  .card-body
+                    ul.nav.flex-column
+                      li.nav-item
+                        a.nav-link(href="#") Hidden Files
+                      li.nav-item
+                        a.nav-link(href="#") SSH Keys
             
-    footer
-  
-    script(src="./assets/js/main.js")
+          .col-md-9
+            block content
+              
+      footer
+    
+      script(src="./assets/js/main.js")
