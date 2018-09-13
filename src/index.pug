@@ -1,12 +1,44 @@
 extends _base.pug
 
 block content
-    h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    h5 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    h6 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    p.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolorum explicabo ipsa libero nobis pariatur
-        ratione sed sunt voluptas voluptatum?
+    h2 Remotes
+    
+    hr
+    
+    h4 Checking Remotes
+    pre
+      code.language-bash git remote -v
+    
+    hr
+    
+    h4 Adding a Remote
+    p In this example we are adding a 'staging' remote
+    pre
+      code.language-bash git remote add staging https://git.heroku.com/app-name.git
+    
+    hr
+      
+    h4 Removing a Remote
+    p In this example we are removing the 'staging' remote
+    pre
+      code.language-bash git remote rm staging
+    
+    hr
+    
+    h4 Renaming a Remote
+    p In this example we are renaming the 'origin' remote to 'production'
+    pre
+      code.language-bash git remote rename origin production
+
+    hr
+    
+    h4 Setting push url for Remote
+    pre
+      code.language-bash git remote set-url --push origin "NO PUSHING ALLOWED"
+      
+    hr
+      
+    h4 Setting the remote tracking branch
+    p In this example we are setting the 'production' remote for tracking
+    pre
+      code.language-bash git config branch.master.remote production

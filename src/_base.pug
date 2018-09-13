@@ -5,35 +5,65 @@ head
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
     // Search Engine Metadata
-    title Page Title
+    title Docs
     meta(name="description", content="")
-
-    // Open Graph Metadata
-    meta(property="og:title", content="")
-    meta(property="og:description", content="")
-    meta(property="og:url", content="")
-    meta(property="og:image", content="")
-    meta(property="og:image:width", content="1200")
-    meta(property="og:image:height", content="630")
 
     // Stylesheets
     link(rel="stylesheet", type="text/css", href="./assets/css/home_template.css")
 
 body
+  header
+    .jumbotron
+      .container-fluid.text-center
+        h1.display-3 Docs
+  
+  main
+    .container-fluid
+      .row
+        .col-md-3
+          .accordion#accordionExample
+            .card
+              .card-header
+                h5.mb-0
+                  button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne") Git
 
-    #cookies-alert
-        p This site uses cookies to make sure you have the best experience. #[a(href="#") Read our cookie policy]
-        button#close-cookies-alert(role="button") Close
+              #collapseOne.collapse.show(data-parent="#accordionExample")
+                .card-body
+                  ul.nav.flex-column
+                    li.nav-item
+                      a.nav-link(href="/") Remotes
+                    li.nav-item
+                      a.nav-link(href="#") Removing Files
+            .card
+              .card-header
+                h5.mb-0
+                  button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTwo") Python
 
-    .skip-nav
-        a(href="#content") Skip to Main Content
+              #collapseTwo.collapse(data-parent="#accordionExample")
+                .card-body
+                  ul.nav.flex-column
+                    li.nav-item
+                      a.nav-link(href="#") PIP
+                    li.nav-item
+                      a.nav-link(href="#") Django
+                    li.nav-item
+                      a.nav-link(href="#") virtualenv
+            .card
+              .card-header
+                h5.mb-0
+                  button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseThree") Mac
 
-    header
-
-    main#content
-        block content
-
+              #collapseThree.collapse(data-parent="#accordionExample")
+                .card-body
+                  ul.nav.flex-column
+                    li.nav-item
+                      a.nav-link(href="#") Hidden Files
+                    li.nav-item
+                      a.nav-link(href="#") SSH Keys
+          
+        .col-md-9
+          block content
+            
     footer
-
-
+  
     script(src="./assets/js/main.js")

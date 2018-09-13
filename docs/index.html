@@ -4,37 +4,100 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Search Engine Metadata-->
-  <title>Page Title</title>
+  <title>Docs</title>
   <meta name="description" content="">
-  <!-- Open Graph Metadata-->
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <!-- Stylesheets-->
   <link rel="stylesheet" type="text/css" href="./assets/css/home_template.css">
 </head>
 <body>
-  <div id="cookies-alert">
-    <p>This site uses cookies to make sure you have the best experience. <a href="#">Read our cookie policy</a></p>
-    <button id="close-cookies-alert" role="button">Close</button>
-  </div>
-  <div class="skip-nav"><a href="#content">Skip to Main Content</a></div>
-  <header></header>
-  <main id="content">
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-    <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolorum explicabo ipsa libero nobis pariatur
-      ratione sed sunt voluptas voluptatum?
-    </p>
+  <header>
+    <div class="jumbotron">
+      <div class="container-fluid text-center">
+        <h1 class="display-3">Docs</h1>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">Git</button>
+                </h5>
+              </div>
+              <div class="collapse show" id="collapseOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="/">Remotes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Removing Files</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo">Python</button>
+                </h5>
+              </div>
+              <div class="collapse" id="collapseTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#">PIP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Django</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">virtualenv</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree">Mac</button>
+                </h5>
+              </div>
+              <div class="collapse" id="collapseThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#">Hidden Files</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SSH Keys</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <h2>Remotes</h2>
+          <hr>
+          <h4>Checking Remotes</h4>
+          <pre><code class="language-bash">git remote -v</code></pre>
+          <hr>
+          <h4>Adding a Remote</h4>
+          <p>In this example we are adding a 'staging' remote</p>
+          <pre><code class="language-bash">git remote add staging https://git.heroku.com/app-name.git</code></pre>
+          <hr>
+          <h4>Removing a Remote</h4>
+          <p>In this example we are removing the 'staging' remote</p>
+          <pre><code class="language-bash">git remote rm staging</code></pre>
+          <hr>
+          <h4>Renaming a Remote</h4>
+          <p>In this example we are renaming the 'origin' remote to 'production'</p>
+          <pre><code class="language-bash">git remote rename origin production</code></pre>
+          <hr>
+          <h4>Setting push url for Remote</h4>
+          <pre><code class="language-bash">git remote set-url --push origin "NO PUSHING ALLOWED"</code></pre>
+          <hr>
+          <h4>Setting the remote tracking branch</h4>
+          <p>In this example we are setting the 'production' remote for tracking</p>
+          <pre><code class="language-bash">git config branch.master.remote production</code></pre>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="./assets/js/main.js"></script>
   </main>
-  <footer></footer>
-  <script src="./assets/js/main.js"></script>
 </body>

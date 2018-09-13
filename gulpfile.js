@@ -83,8 +83,8 @@ gulp.task('images', function () {
 
 gulp.task('js', function () {
     gulp.src([
-        // 'node_modules/jquery/dist/jquery.js',
-        // 'node_modules/bootstrap/dist/js/bootstrap.js',
+        './node_modules/jquery/dist/jquery.js',
+        './node_modules/bootstrap/dist/js/bootstrap.js',
         source_root + 'assets/js/**/*.+(js|jsx)'
     ])
         .pipe(sourcemaps.init())
