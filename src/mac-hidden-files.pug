@@ -1,0 +1,21 @@
+extends _base.pug
+
+block vars
+  - var h1="Mac - Hidden Files"
+
+block content
+  hr
+
+  h4 Show Hidden files
+  pre
+    code.language-bash.
+      defaults write com.apple.finder AppleShowAllFiles YES
+      killall Finder
+
+  hr
+
+  h4 Hide Hidden files
+  pre
+    code.language-bash.
+      defaults write com.apple.finder AppleShowAllFiles NO
+      killall Finder

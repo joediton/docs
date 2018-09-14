@@ -1,0 +1,32 @@
+extends _base.pug
+
+block vars
+  - var h1="Mac - SSH Keys"
+
+block content
+  h4 Check for existing SSH keys
+  pre
+    code.language-bash.
+      ls -al ~/.ssh
+
+  hr
+  
+  h4 Delete SSH keys from default location
+  pre
+    code.language-bash.
+      rm ~/.ssh/id_rsa.pub
+      rm ~/.ssh/id_rsa
+      
+  hr
+
+  h4 Create new SSH key
+  pre
+    code.language-bash.
+      ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+      
+  hr
+      
+  h4 Copy SSH key to clipboard
+  pre
+    code.language-bash.
+      pbcopy < ~/.ssh/id_rsa.pub

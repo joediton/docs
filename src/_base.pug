@@ -1,3 +1,5 @@
+block vars
+
 doctype html
 html(lang="en")
   head
@@ -9,61 +11,41 @@ html(lang="en")
       meta(name="description", content="")
 
       // Stylesheets
-      link(rel="stylesheet", type="text/css", href="./assets/css/home_template.css")
+      link(rel="stylesheet", type="text/css", href="./assets/css/global.css")
 
   body
-    header
-      .jumbotron
-        .container-fluid.text-center
-          h1.display-3 Docs
+    header.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container
+        a.navbar-brand(href="./") Docs
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        nav.collapse.navbar-collapse#navbarSupportedContent
+          ul.navbar-nav.ml-auto
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown") Git
+              .dropdown-menu
+                a.dropdown-item(href="./") Remotes
+                a.dropdown-item(href="./git-removing-files.html") Removing Files
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown") Python
+              .dropdown-menu
+                a.dropdown-item(href="./python-pip.html") PIP
+                a.dropdown-item(href="./python-django.html") Django
+                a.dropdown-item(href="./python-virtualenv.html") virtualenv
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown") Mac
+              .dropdown-menu
+                a.dropdown-item(href="./mac-hidden-files.html") Hidden Files
+                a.dropdown-item(href="./mac-ssh-keys.html") SSH Keys
+                
+    .jumbotron
+      .container.text-center
+        h1=h1
     
-    main
-      .container-fluid
-        .row
-          .col-md-3
-            .accordion#accordionExample
-              .card
-                .card-header
-                  h5.mb-0
-                    button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseOne") Git
-
-                #collapseOne.collapse.show(data-parent="#accordionExample")
-                  .card-body
-                    ul.nav.flex-column
-                      li.nav-item
-                        a.nav-link(href="/") Remotes
-                      li.nav-item
-                        a.nav-link(href="#") Removing Files
-              .card
-                .card-header
-                  h5.mb-0
-                    button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseTwo") Python
-
-                #collapseTwo.collapse(data-parent="#accordionExample")
-                  .card-body
-                    ul.nav.flex-column
-                      li.nav-item
-                        a.nav-link(href="#") PIP
-                      li.nav-item
-                        a.nav-link(href="#") Django
-                      li.nav-item
-                        a.nav-link(href="#") virtualenv
-              .card
-                .card-header
-                  h5.mb-0
-                    button.btn.btn-link(type="button" data-toggle="collapse" data-target="#collapseThree") Mac
-
-                #collapseThree.collapse(data-parent="#accordionExample")
-                  .card-body
-                    ul.nav.flex-column
-                      li.nav-item
-                        a.nav-link(href="#") Hidden Files
-                      li.nav-item
-                        a.nav-link(href="#") SSH Keys
+    .container
+      main
+        block content
             
-          .col-md-9
-            block content
-              
-      footer
+    footer
     
-      script(src="./assets/js/main.js")
+    script(src="./assets/js/main.js")

@@ -1,0 +1,15 @@
+extends _base.pug
+
+block vars
+  - var h1="Git - Removing Files"
+
+block content
+  h4 Remove #[b FILE] from repo without deleting it from filesystem
+  pre
+    code.language-bash git rm --cached file.ext
+
+  hr
+
+  h4 Remove #[b FOLDER] from repo without deleting it from filesystem
+  pre
+    code.language-bash git rm --cached dir -r

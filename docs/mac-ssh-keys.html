@@ -30,32 +30,26 @@
     </header>
     <div class="jumbotron">
       <div class="container text-center">
-        <h1>Git - Remotes</h1>
+        <h1>Mac - SSH Keys</h1>
       </div>
     </div>
     <div class="container">
       <main>
-        <h4>Checking Remotes</h4>
-        <pre><code class="language-bash">git remote -v</code></pre>
+        <h4>Check for existing SSH keys</h4>
+        <pre><code class="language-bash">ls -al ~/.ssh
+</code></pre>
         <hr>
-        <h4>Adding a Remote</h4>
-        <p>In this example we are adding a 'staging' remote</p>
-        <pre><code class="language-bash">git remote add staging https://git.heroku.com/app-name.git</code></pre>
+        <h4>Delete SSH keys from default location</h4>
+        <pre><code class="language-bash">rm ~/.ssh/id_rsa.pub
+rm ~/.ssh/id_rsa
+</code></pre>
         <hr>
-        <h4>Removing a Remote</h4>
-        <p>In this example we are removing the 'staging' remote</p>
-        <pre><code class="language-bash">git remote rm staging</code></pre>
+        <h4>Create new SSH key</h4>
+        <pre><code class="language-bash">ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+</code></pre>
         <hr>
-        <h4>Renaming a Remote</h4>
-        <p>In this example we are renaming the 'origin' remote to 'production'</p>
-        <pre><code class="language-bash">git remote rename origin production</code></pre>
-        <hr>
-        <h4>Setting push url for Remote</h4>
-        <pre><code class="language-bash">git remote set-url --push origin "NO PUSHING ALLOWED"</code></pre>
-        <hr>
-        <h4>Setting the remote tracking branch</h4>
-        <p>In this example we are setting the 'production' remote for tracking</p>
-        <pre><code class="language-bash">git config branch.master.remote production</code></pre>
+        <h4>Copy SSH key to clipboard</h4>
+        <pre><code class="language-bash">pbcopy < ~/.ssh/id_rsa.pub</code></pre>
       </main>
     </div>
     <footer></footer>

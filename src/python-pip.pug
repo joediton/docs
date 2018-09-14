@@ -1,0 +1,10 @@
+extends _base.pug
+
+block vars
+  - var h1="Python - PIP"
+
+block content
+  h4 Install Python packages from requirements file
+
+  pre
+    code.language-bash pip install -r reqs/dev.txt

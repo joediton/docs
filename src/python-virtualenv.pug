@@ -1,0 +1,10 @@
+extends _base.pug
+
+block vars
+  - var h1="Python - virtualenv"
+
+block content
+  h4 Create a Python 3 environment
+
+  pre
+    code.language-bash mkvirtualenv --python=/usr/local/bin/python3 projectname
