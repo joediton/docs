@@ -14,7 +14,7 @@ html(lang="en")
       link(rel="stylesheet", type="text/css", href="./assets/css/global.css")
 
   body
-    header.navbar.navbar-expand-lg.navbar-light.bg-light
+    header.navbar.navbar-expand-lg.navbar-dark.bg-dark
       .container
         a.navbar-brand(href="./") Docs
         button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
@@ -41,6 +41,8 @@ html(lang="en")
     .jumbotron
       .container.text-center
         h1=h1
+        if sub_heading
+          p.lead=sub_heading
     
     .container
       main
