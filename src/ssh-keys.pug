@@ -1,18 +1,23 @@
 extends _base.pug
 
 block vars
-  - var h1="Mac"
-  - var sub_heading="SSH Keys"
+  - var h1="SSH Keys"
 
 block content
   h4 Check for existing SSH keys
+  h6 Mac
   pre
     code.language-bash.
-      ls -al ~/.ssh
+      cd ~/.ssh
+  h6 Windows
+  pre
+    code.language-bash.
+      cd %userprofile%/.ssh
 
   hr
   
   h4 Delete SSH keys from default location
+  h6 Mac
   pre
     code.language-bash.
       rm ~/.ssh/id_rsa.pub
@@ -21,13 +26,20 @@ block content
   hr
 
   h4 Create new SSH key
+  h6 Mac &amp; Windows
   pre
     code.language-bash.
-      ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-      
+      ssh-keygen -t rsa -C "your_email@example.com"
+
   hr
       
   h4 Copy SSH key to clipboard
+  h6 Mac
   pre
     code.language-bash.
       pbcopy < ~/.ssh/id_rsa.pub
+  h6 Windows
+  pre
+    code.language-bash.
+      cd %userprofile%/.ssh
+      clip < id_rsa.pub
